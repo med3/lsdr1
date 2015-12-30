@@ -46,7 +46,7 @@ Extends:
 ;
 
 IPTABLE:
-	'iptables' '-A' traffic=['INPUT' | 'OUTPUT' | 'FORWARD'] ('-s' source=((ips4+=INT '.')+ vals4=INT))? ('-d' destination=((ipd4+=INT '.')+ vald4=INT))? ('-p' protocol=['tcp'|'udp'])? '-j' target=['ACCEPT' | 'REJECT' | 'DROP'] ';'
+	'iptables' '-A' traffic=['INPUT' | 'OUTPUT' | 'FORWARD'] ('-s' (ips4+=INT '.')+ vals4=INT)? ('-d' (ipd4+=INT '.')+ vald4=INT)? ('-p' protocol=['tcp'|'udp'])? '-j' target=['ACCEPT' | 'REJECT' | 'DROP'] ';'
 
 Children:
 	
